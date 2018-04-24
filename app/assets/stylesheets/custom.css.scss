@@ -1,3 +1,86 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html{
+  height: 100%
+}
+
+body{
+  background-image: asset-url('bg.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.container{
+  min-height: 80.8%;
+}
+
+.navbar {
+    margin-bottom: 10;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: #fff;
+    letter-spacing: 1px;
+    border-bottom: thin solid #e1e1e1;
+    padding: 3px 0;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #cc3349;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #000;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #000;
+  text-transform: uppercase;
+}
+
+#logo:hover{
+  color: #777;
+  text-decoration: none;
+}
+
+.footer {
+    display: block;
+    font-size: 13px;
+    background: #191f21;
+    color: #fff;
+    padding: 15px 0 5px;
+    border-top: thin solid #fff;
+    width: 100%;
+    overflow: hidden;
+}
+
+footer p {
+  float: left;
+}
+
+footer a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+.center{
+  text-align: center;
+  /* bring your own prefixes */
+}
