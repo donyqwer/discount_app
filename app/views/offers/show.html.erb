@@ -1,0 +1,12 @@
+<center>
+  <div class="col-xs-8 col-xs-offset-2">
+    <div class="offer-container box-shadow">
+      <%= image_tag(@offer.image, class: "image-offer") %>
+      <h2 class="offer-title"><%= @offer.title %></h2>
+      <p class="offer-description"><%= @offer.description %></p>
+      <%= link_to "Claim Offer", claim_offer_path(@offer), class: "btn btn-claim" %>
+    </div>
+  </div>
+</center>
+
+

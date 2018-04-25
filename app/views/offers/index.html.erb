@@ -1,0 +1,34 @@
+<h1 align="center">Listing all Offer</h1>
+
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Image</th>
+          <th>Tools</th>
+        </tr> 
+      </thead>
+      <tbody>
+        <% @offers.each do |offers| %>
+          <tr>
+            <td><%= link_to offers.title, offer_path(offers) %></td>
+            <td><%= offers.description %></td>
+            <td><%= offers.image %></td>
+            <td>
+              <%= link_to edit_offer_path(offers) do %>
+                <span class="glyphicon glyphicon-pencil"></span>
+              <% end %>
+              <%= link_to offer_path(offers),
+                                      method: :delete, data: {confirm: "Are you sure want to delete the Offer?"} do %>
+                <span class="glyphicon glyphicon-remove"></span>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

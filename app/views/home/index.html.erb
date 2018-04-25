@@ -1,1 +1,17 @@
 <h1 class="center">Get some <strong>offers</strong> here!</h1>
+<center>
+  <div class="col-md-offset-2 col-md-8 col-lg-offset-0 col-lg-12">
+    <div class="row">
+      <% @offers.each do |offers| %>
+        <%= link_to offer_path(offers), class: "card-container box-shadow" do %>
+          <%= image_tag(offers.image, class: "image-card") %>
+          <div class="card-body">
+            <b><%= offers.title %></b>
+            <p><%= truncate(offers.description, length: 100) %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</center>
+  
